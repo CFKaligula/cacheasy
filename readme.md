@@ -33,15 +33,16 @@ else:
 
 ## Removing from cache
 
+To delete a file from the cache:
+
 ```python
 import cacheasy
 cacheasy.remove_from_cache('my_cool_x')
 ```
 
-Or if you want to remove all your cache, get the `cache_folderpath` and then remove it with the `shutil` library:
+To easily delete all cache (including the folder):
 
 ```python
 import cacheasy
-import shutil
-shutil.rmtree(cacheasy.get_cache_folderpath())
+cacheasy.clear_cache()
 ```
