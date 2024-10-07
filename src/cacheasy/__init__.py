@@ -9,11 +9,15 @@ def get_cache_folderpath() -> str:
     '''
     Get the path to the cache folder
     '''
-    if os.path.isfile('.env'):
-        dotenv.load_dotenv(os.path.join(os.getcwd(), '.env'))
-        cache_folderpath = os.path.normpath(os.environ['cache_folderpath'])
-    else:
-        cache_folderpath = os.path.abspath('cache')
+    env_file_path = os.path.join(os.getcwd(), '.env')
+    cache_folderpath_key = 'cache_folderpath'
+
+    cache_folderpath = os.path.abspath('cache')
+
+    if os.path.isfile(env_file_path):
+        dotenv.load_dotenv(env_file_path)
+        if cache_folderpath_key in os.environ:
+            cache_folderpath = os.path.normpath(os.environ[cache_folderpath_key])
 
     return cache_folderpath
 

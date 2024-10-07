@@ -4,11 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cacheasy"
-version = "0.0.5"
-dependencies = [
-  'python-dotenv==1.0.1',
-  'importlib-metadata; python_version>="3.10"',
-]
+version = "0.0.6"
+dependencies = ['python-dotenv']
 authors = [{ name = "Casper Kole", email = "casper@voltgoed.nl" }]
 description = "A simple package for caching python objects."
 readme = "readme.md"
