@@ -19,3 +19,6 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/casper-voltgoed/cacheasy"
 Issues = "https://github.com/casper-voltgoed/cacheasy/issues"
+
+[dependency-groups]
+dev = ["mypy>=1.14.0", "pytest>=8.3.4"]
